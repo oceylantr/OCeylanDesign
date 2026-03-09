@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>OCeylanDesign — Digital Assets for Print-on-Demand</title>
+<title>OCeylanDesign — Print-on-Demand için Dijital Ürünler</title>
 <style>
-  /* Fallback if Google Fonts blocked */
   @import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500&display=swap');
 </style>
 <style>
@@ -21,7 +20,6 @@
 
   * { margin: 0; padding: 0; box-sizing: border-box; max-width: 100%; }
   html, body { overflow-x: hidden; width: 100%; }
-
   html { scroll-behavior: smooth; }
 
   body {
@@ -33,7 +31,6 @@
     overflow-x: hidden;
   }
 
-  /* NOISE TEXTURE OVERLAY */
   body::before {
     content: '';
     position: fixed;
@@ -44,7 +41,6 @@
     opacity: 0.5;
   }
 
-  /* NAV */
   nav {
     display: flex;
     align-items: center;
@@ -64,23 +60,10 @@
     font-size: 1.2rem;
     letter-spacing: -0.02em;
   }
-
   .logo span { color: var(--accent); }
 
-  nav ul {
-    display: flex;
-    gap: 2.5rem;
-    list-style: none;
-  }
-
-  nav a {
-    text-decoration: none;
-    color: var(--ink);
-    font-size: 0.9rem;
-    font-weight: 500;
-    transition: color 0.2s;
-  }
-
+  nav ul { display: flex; gap: 2.5rem; list-style: none; align-items: center; }
+  nav a { text-decoration: none; color: var(--ink); font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
   nav a:hover { color: var(--accent); }
 
   .nav-cta {
@@ -91,7 +74,6 @@
     font-size: 0.85rem !important;
     transition: background 0.2s !important;
   }
-
   .nav-cta:hover { background: var(--accent) !important; color: white !important; }
 
   .lang-switcher {
@@ -118,7 +100,6 @@
   }
   .lang-switcher a:hover:not(.active) { color: var(--ink) !important; }
 
-  /* HERO */
   .hero {
     min-height: 92vh;
     display: grid;
@@ -129,7 +110,6 @@
     position: relative;
     overflow: hidden;
   }
-
   .hero::after {
     content: '';
     position: absolute;
@@ -156,16 +136,13 @@
     margin-bottom: 1.8rem;
     color: var(--muted);
   }
-
   .hero-label::before {
     content: '';
-    width: 6px;
-    height: 6px;
+    width: 6px; height: 6px;
     border-radius: 50%;
     background: var(--accent);
     animation: pulse 2s infinite;
   }
-
   @keyframes pulse {
     0%, 100% { opacity: 1; transform: scale(1); }
     50% { opacity: 0.5; transform: scale(1.4); }
@@ -179,19 +156,15 @@
     letter-spacing: -0.03em;
     margin-bottom: 1.5rem;
   }
-
   .hero h1 em {
     font-style: normal;
     color: var(--accent);
     position: relative;
   }
-
   .hero h1 em::after {
     content: '';
     position: absolute;
-    bottom: 4px;
-    left: 0;
-    right: 0;
+    bottom: 4px; left: 0; right: 0;
     height: 3px;
     background: var(--accent);
     border-radius: 2px;
@@ -206,12 +179,7 @@
     line-height: 1.7;
   }
 
-  .hero-actions {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-    flex-wrap: wrap;
-  }
+  .hero-actions { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
 
   .btn-primary {
     background: var(--accent);
@@ -224,11 +192,7 @@
     transition: transform 0.2s, box-shadow 0.2s;
     box-shadow: 0 4px 20px rgba(232,93,38,0.35);
   }
-
-  .btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 30px rgba(232,93,38,0.45);
-  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(232,93,38,0.45); }
 
   .btn-secondary {
     color: var(--ink);
@@ -240,10 +204,8 @@
     gap: 0.4rem;
     transition: gap 0.2s;
   }
-
   .btn-secondary:hover { gap: 0.7rem; }
 
-  /* HERO VISUAL */
   .hero-visual {
     position: relative;
     display: flex;
@@ -259,7 +221,6 @@
     transform: rotate(-4deg);
     animation: float 6s ease-in-out infinite;
   }
-
   @keyframes float {
     0%, 100% { transform: rotate(-4deg) translateY(0); }
     50% { transform: rotate(-4deg) translateY(-12px); }
@@ -276,7 +237,6 @@
     gap: 0.6rem;
     min-width: 140px;
   }
-
   .mockup-card:nth-child(2) { margin-top: 2rem; }
   .mockup-card:nth-child(3) { margin-top: -1rem; }
 
@@ -289,24 +249,13 @@
     justify-content: center;
     font-size: 2rem;
   }
-
   .thumb-1 { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
   .thumb-2 { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
   .thumb-3 { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
   .thumb-4 { background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); }
 
-  .mockup-label {
-    font-size: 0.7rem;
-    font-weight: 600;
-    color: var(--ink);
-    font-family: 'Arial Black', 'Helvetica Neue', Arial, sans-serif;
-  }
-
-  .mockup-price {
-    font-size: 0.65rem;
-    color: var(--accent);
-    font-weight: 600;
-  }
+  .mockup-label { font-size: 0.7rem; font-weight: 600; color: var(--ink); font-family: 'Arial Black', sans-serif; }
+  .mockup-price { font-size: 0.65rem; color: var(--accent); font-weight: 600; }
 
   .badge-float {
     position: absolute;
@@ -319,11 +268,9 @@
     white-space: nowrap;
     box-shadow: 0 4px 16px rgba(0,0,0,0.2);
   }
-
   .badge-float.top { top: 30px; right: 20px; }
   .badge-float.bottom { bottom: 60px; left: 0px; background: var(--accent); }
 
-  /* STATS STRIP */
   .stats {
     background: var(--ink);
     color: var(--paper);
@@ -334,61 +281,17 @@
     gap: 2rem;
     flex-wrap: wrap;
   }
+  .stat-item { text-align: center; }
+  .stat-num { font-family: 'Arial Black', sans-serif; font-size: 2.2rem; font-weight: 800; color: var(--accent); line-height: 1; }
+  .stat-label { font-size: 0.8rem; color: rgba(245,240,232,0.6); margin-top: 0.3rem; text-transform: uppercase; letter-spacing: 0.06em; }
 
-  .stat-item {
-    text-align: center;
-  }
+  .products { padding: 6rem 4rem; }
 
-  .stat-num {
-    font-family: 'Arial Black', 'Helvetica Neue', Arial, sans-serif;
-    font-size: 2.2rem;
-    font-weight: 800;
-    color: var(--accent);
-    line-height: 1;
-  }
+  .section-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 3rem; }
+  .section-tag { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 0.5rem; }
+  .section-title { font-family: 'Arial Black', 'Helvetica Neue', Arial, sans-serif; font-size: clamp(1.8rem, 3vw, 2.8rem); font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; }
 
-  .stat-label {
-    font-size: 0.8rem;
-    color: rgba(245,240,232,0.6);
-    margin-top: 0.3rem;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-  }
-
-  /* PRODUCTS SECTION */
-  .products {
-    padding: 6rem 4rem;
-  }
-
-  .section-header {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    margin-bottom: 3rem;
-  }
-
-  .section-tag {
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--accent);
-    margin-bottom: 0.5rem;
-  }
-
-  .section-title {
-    font-family: 'Arial Black', 'Helvetica Neue', Arial, sans-serif;
-    font-size: clamp(1.8rem, 3vw, 2.8rem);
-    font-weight: 800;
-    letter-spacing: -0.02em;
-    line-height: 1.1;
-  }
-
-  .product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 1.5rem;
-  }
+  .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
 
   .product-card {
     background: var(--card);
@@ -398,11 +301,7 @@
     transition: transform 0.3s, box-shadow 0.3s;
     cursor: pointer;
   }
-
-  .product-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 20px 50px rgba(0,0,0,0.1);
-  }
+  .product-card:hover { transform: translateY(-6px); box-shadow: 0 20px 50px rgba(0,0,0,0.1); }
 
   .product-img {
     width: 100%;
@@ -414,7 +313,6 @@
     position: relative;
     overflow: hidden;
   }
-
   .product-img-1 { background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460); }
   .product-img-2 { background: linear-gradient(135deg, #f7971e, #ffd200); }
   .product-img-3 { background: linear-gradient(135deg, #ee0979, #ff6a00); }
@@ -424,8 +322,7 @@
 
   .product-tag {
     position: absolute;
-    top: 12px;
-    left: 12px;
+    top: 12px; left: 12px;
     background: rgba(255,255,255,0.95);
     color: var(--ink);
     padding: 0.3rem 0.7rem;
@@ -436,36 +333,11 @@
     letter-spacing: 0.05em;
   }
 
-  .product-info {
-    padding: 1.2rem 1.4rem;
-  }
-
-  .product-name {
-    font-family: 'Arial Black', 'Helvetica Neue', Arial, sans-serif;
-    font-weight: 700;
-    font-size: 1rem;
-    margin-bottom: 0.3rem;
-  }
-
-  .product-desc {
-    font-size: 0.82rem;
-    color: var(--muted);
-    margin-bottom: 1rem;
-    line-height: 1.5;
-  }
-
-  .product-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .product-price {
-    font-family: 'Arial Black', 'Helvetica Neue', Arial, sans-serif;
-    font-weight: 800;
-    font-size: 1.1rem;
-    color: var(--accent);
-  }
+  .product-info { padding: 1.2rem 1.4rem; }
+  .product-name { font-family: 'Arial Black', sans-serif; font-weight: 700; font-size: 1rem; margin-bottom: 0.3rem; }
+  .product-desc { font-size: 0.82rem; color: var(--muted); margin-bottom: 1rem; line-height: 1.5; }
+  .product-footer { display: flex; justify-content: space-between; align-items: center; }
+  .product-price { font-family: 'Arial Black', sans-serif; font-weight: 800; font-size: 1.1rem; color: var(--accent); }
 
   .btn-buy {
     background: var(--ink);
@@ -477,21 +349,11 @@
     text-decoration: none;
     transition: background 0.2s;
   }
-
   .btn-buy:hover { background: var(--accent); }
 
-  /* WHY US */
-  .why {
-    background: var(--cream);
-    padding: 6rem 4rem;
-  }
+  .why { background: var(--cream); padding: 6rem 4rem; }
 
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-top: 3rem;
-  }
+  .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem; }
 
   .feature-card {
     padding: 2rem;
@@ -500,52 +362,15 @@
     border: 1px solid rgba(0,0,0,0.05);
     transition: transform 0.2s;
   }
-
   .feature-card:hover { transform: translateY(-4px); }
+  .feature-icon { font-size: 2.2rem; margin-bottom: 1rem; }
+  .feature-title { font-family: 'Arial Black', sans-serif; font-weight: 700; font-size: 1rem; margin-bottom: 0.5rem; }
+  .feature-text { font-size: 0.85rem; color: var(--muted); line-height: 1.7; }
 
-  .feature-icon {
-    font-size: 2.2rem;
-    margin-bottom: 1rem;
-  }
+  .policies { padding: 5rem 4rem; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
+  .policy-block h3 { font-family: 'Arial Black', sans-serif; font-weight: 700; font-size: 1.1rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }
+  .policy-block p { font-size: 0.88rem; color: var(--muted); line-height: 1.8; }
 
-  .feature-title {
-    font-family: 'Arial Black', 'Helvetica Neue', Arial, sans-serif;
-    font-weight: 700;
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .feature-text {
-    font-size: 0.85rem;
-    color: var(--muted);
-    line-height: 1.7;
-  }
-
-  /* POLICIES */
-  .policies {
-    padding: 5rem 4rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-  }
-
-  .policy-block h3 {
-    font-family: 'Arial Black', 'Helvetica Neue', Arial, sans-serif;
-    font-weight: 700;
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  .policy-block p {
-    font-size: 0.88rem;
-    color: var(--muted);
-    line-height: 1.8;
-  }
-
-  /* FOOTER */
   footer {
     background: var(--ink);
     color: var(--paper);
@@ -554,28 +379,12 @@
     grid-template-columns: 2fr 1fr 1fr;
     gap: 3rem;
   }
-
   .footer-brand .logo { color: var(--paper); margin-bottom: 0.8rem; display: block; }
   .footer-brand p { font-size: 0.82rem; color: rgba(245,240,232,0.5); line-height: 1.7; }
-
-  footer h4 {
-    font-family: 'Arial Black', 'Helvetica Neue', Arial, sans-serif;
-    font-weight: 700;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    margin-bottom: 1rem;
-    color: rgba(245,240,232,0.5);
-  }
-
+  footer h4 { font-family: 'Arial Black', sans-serif; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem; color: rgba(245,240,232,0.5); }
   footer ul { list-style: none; }
   footer ul li { margin-bottom: 0.5rem; }
-  footer ul a {
-    text-decoration: none;
-    color: rgba(245,240,232,0.8);
-    font-size: 0.85rem;
-    transition: color 0.2s;
-  }
+  footer ul a { text-decoration: none; color: rgba(245,240,232,0.8); font-size: 0.85rem; transition: color 0.2s; }
   footer ul a:hover { color: var(--accent); }
 
   .footer-bottom {
@@ -586,13 +395,8 @@
     justify-content: space-between;
     align-items: center;
   }
+  .footer-bottom p { font-size: 0.75rem; color: rgba(245,240,232,0.35); }
 
-  .footer-bottom p {
-    font-size: 0.75rem;
-    color: rgba(245,240,232,0.35);
-  }
-
-  /* CONTACT */
   .contact-bar {
     background: var(--accent);
     padding: 3rem 4rem;
@@ -602,15 +406,7 @@
     gap: 2rem;
     flex-wrap: wrap;
   }
-
-  .contact-bar h2 {
-    font-family: 'Arial Black', 'Helvetica Neue', Arial, sans-serif;
-    font-size: clamp(1.4rem, 2.5vw, 2rem);
-    font-weight: 800;
-    color: white;
-    letter-spacing: -0.02em;
-  }
-
+  .contact-bar h2 { font-family: 'Arial Black', sans-serif; font-size: clamp(1.4rem, 2.5vw, 2rem); font-weight: 800; color: white; letter-spacing: -0.02em; }
   .contact-bar p { color: rgba(255,255,255,0.75); font-size: 0.9rem; margin-top: 0.3rem; }
 
   .btn-white {
@@ -624,27 +420,12 @@
     white-space: nowrap;
     transition: transform 0.2s;
   }
-
   .btn-white:hover { transform: scale(1.04); }
 
-  /* ANIMATIONS */
-  .fade-in {
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-  }
+  .fade-in { opacity: 1; transform: translateY(0); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .fade-in.animate { opacity: 0; transform: translateY(20px); }
+  .fade-in.animate.visible { opacity: 1; transform: translateY(0); }
 
-  .fade-in.animate {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  .fade-in.animate.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  /* RESPONSIVE */
   @media (max-width: 900px) {
     nav { padding: 1.2rem 1.5rem; }
     nav ul { display: none; }
@@ -665,234 +446,120 @@
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <div class="logo">OCeylan<span>Design</span></div>
   <ul>
-    <li><a href="#products">Products</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#policies">Policies</a></li>
-    <li>
-      <div class="lang-switcher">
-        <a href="#" class="active">EN</a>
-        <a href="/tr/index.html">TR</a>
-        <a href="/de/index.html">DE</a>
-        <a href="/fr/index.html">FR</a>
-        <a href="/es/index.html">ES</a>
-      </div>
-    </li>
-    <li><a href="#contact" class="nav-cta">Shop Now</a></li>
+    <li><a href="#products">Ürünler</a></li>
+    <li><a href="#about">Hakkında</a></li>
+    <li><a href="#policies">Politikalar</a></li>
+    <li><a href="#contact" class="nav-cta">Alışveriş Yap</a></li>
   </ul>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-content">
-    <div class="hero-label">Digital Downloads · Instant Access</div>
-    <h1>Assets built for<br><em>Print-on-Demand</em><br>creators.</h1>
-    <p class="hero-sub">Ready-to-use mockups, t-shirt designs, wall art, phone case templates, and step-by-step guides — everything you need to launch your POD store today.</p>
+    <div class="hero-label">Dijital İndirme · Anında Erişim</div>
+    <h1><em>Print-on-Demand</em><br>satıcıları için<br>hazır dosyalar.</h1>
+    <p class="hero-sub">Kullanıma hazır mockup'lar, t-shirt tasarımları, duvar sanatı, telefon kılıfı şablonları ve adım adım rehberler — POD mağazanı bugün açmak için ihtiyacın olan her şey.</p>
     <div class="hero-actions">
-      <a href="#products" class="btn-primary">Browse Products →</a>
-      <a href="#about" class="btn-secondary">Learn more ↓</a>
+      <a href="#products" class="btn-primary">Ürünlere Bak →</a>
+      <a href="#about" class="btn-secondary">Daha fazla ↓</a>
     </div>
   </div>
   <div class="hero-visual">
     <div class="mockup-grid">
       <div class="mockup-card">
         <div class="mockup-thumb thumb-1">🎨</div>
-        <div class="mockup-label">T-Shirt Bundle</div>
+        <div class="mockup-label">T-Shirt Paketi</div>
         <div class="mockup-price">$12</div>
       </div>
       <div class="mockup-card">
         <div class="mockup-thumb thumb-2">📱</div>
-        <div class="mockup-label">Phone Mockups</div>
+        <div class="mockup-label">Telefon Mockup</div>
         <div class="mockup-price">$8</div>
       </div>
       <div class="mockup-card">
         <div class="mockup-thumb thumb-3">🖼️</div>
-        <div class="mockup-label">Wall Art Pack</div>
+        <div class="mockup-label">Duvar Sanatı</div>
         <div class="mockup-price">$15</div>
       </div>
       <div class="mockup-card">
         <div class="mockup-thumb thumb-4">📖</div>
-        <div class="mockup-label">POD Guide</div>
+        <div class="mockup-label">POD Rehber</div>
         <div class="mockup-price">$19</div>
       </div>
     </div>
-    <div class="badge-float top">✦ Instant Download</div>
-    <div class="badge-float bottom">500+ Happy Customers</div>
+    <div class="badge-float top">✦ Anında İndir</div>
+    <div class="badge-float bottom">500+ Mutlu Müşteri</div>
   </div>
 </section>
 
-<!-- STATS -->
 <div class="stats">
   <div class="stat-item">
     <div class="stat-num">200+</div>
-    <div class="stat-label">Commercial License</div>
+    <div class="stat-label">Ticari Lisans</div>
   </div>
   <div class="stat-item">
     <div class="stat-num">100%</div>
-    <div class="stat-label">Instant Download</div>
+    <div class="stat-label">Anında İndirme</div>
   </div>
   <div class="stat-item">
     <div class="stat-num">6</div>
-    <div class="stat-label">Product Categories</div>
+    <div class="stat-label">Ürün Kategorisi</div>
   </div>
   <div class="stat-item">
     <div class="stat-num">5.0★</div>
-    <div class="stat-label">Customer Rating</div>
+    <div class="stat-label">Müşteri Puanı</div>
   </div>
 </div>
 
-<!-- PRODUCTS -->
 <section class="products" id="products">
   <div class="section-header fade-in">
     <div>
-      <div class="section-tag">Digital Downloads</div>
-      <h2 class="section-title">Ready to use,<br>ready to sell.</h2>
+      <div class="section-tag">Dijital İndirmeler</div>
+      <h2 class="section-title">Kullanıma hazır,<br>satışa hazır.</h2>
     </div>
   </div>
   <div class="product-grid">
     <div class="product-card fade-in">
       <div class="product-img product-img-5">
-        <div class="product-tag">Bestseller</div>
+        <div class="product-tag">Çok Satan</div>
         📖
       </div>
       <div class="product-info">
-        <div class="product-name">POD How-To eBooks</div>
-        <div class="product-desc">Step-by-step guides to launching on Etsy, Redbubble, and Merch by Amazon. Beginner friendly.</div>
+        <div class="product-name">POD Başlangıç Rehberleri</div>
+        <div class="product-desc">Etsy, Redbubble ve Merch by Amazon'da mağaza açmak için adım adım rehberler. Yeni başlayanlar için ideal.</div>
         <div class="product-footer">
-          <div class="product-price">From $9</div>
-          <a href="https://oceylantrdesign.lemonsqueezy.com/checkout/buy/a62f66ae-c7a2-4616-8c3f-66f31312f12b" target="_blank" class="btn-buy">Get it →</a>
+          <div class="product-price">$9'dan başlayan</div>
+          <a href="https://oceylantrdesign.lemonsqueezy.com/checkout/buy/a62f66ae-c7a2-4616-8c3f-66f31312f12b" target="_blank" class="btn-buy">Al →</a>
         </div>
       </div>
     </div>
     <div class="product-card fade-in">
       <div class="product-img product-img-1">
-        <div class="product-tag">New</div>
+        <div class="product-tag">Yeni</div>
         🛍️
       </div>
       <div class="product-info">
-        <div class="product-name">How to Open an Etsy Store from Scratch (2026) Guide</div>
-        <div class="product-desc">A complete step-by-step guide to launching your Etsy shop in 2026. From setup to first sale — everything covered.</div>
+        <div class="product-name">Etsy'de Sıfırdan Mağaza Nasıl Açılır (2026) Rehberi</div>
+        <div class="product-desc">2026'da Etsy mağazanı sıfırdan açmak için kapsamlı adım adım rehber. Kurulumdan ilk satışa kadar her şey anlatılıyor.</div>
         <div class="product-footer">
-          <div class="product-price">From $9</div>
-          <a href="https://oceylantrdesign.lemonsqueezy.com/checkout/buy/80d98559-10b4-4de8-8b52-28c38e1e8037" target="_blank" class="btn-buy">Get it →</a>
+          <div class="product-price">$9'dan başlayan</div>
+          <a href="https://oceylantrdesign.lemonsqueezy.com/checkout/buy/80d98559-10b4-4de8-8b52-28c38e1e8037" target="_blank" class="btn-buy">Al →</a>
         </div>
       </div>
     </div>
     <div class="product-card fade-in">
       <div class="product-img product-img-4">
-        <div class="product-tag">New</div>
+        <div class="product-tag">Yeni</div>
         🖨️
       </div>
       <div class="product-info">
-        <div class="product-name">Printify Ecosystem End-to-End Operational & Store Setup Guide (2026 Extended Edition)</div>
-        <div class="product-desc">A comprehensive guide to setting up and running your Printify store from scratch — operations, integrations, and scaling.</div>
+        <div class="product-name">Printify Ekosisteminde Uçtan Uca Operasyonel ve Mağaza Kurulum Rehberi (2026 Genişletilmiş Sürüm)</div>
+        <div class="product-desc">Printify mağazanı sıfırdan kurmak ve yönetmek için kapsamlı rehber — operasyon, entegrasyon ve büyüme.</div>
         <div class="product-footer">
-          <div class="product-price">From $9</div>
-          <a href="https://oceylantrdesign.lemonsqueezy.com/checkout/buy/13a1ff62-23f6-47d1-9340-6ad62acd5037" target="_blank" class="btn-buy">Get it →</a>
+          <div class="product-price">$9'dan başlayan</div>
+          <a href="https://oceylantrdesign.lemonsqueezy.com/checkout/buy/13a1ff62-23f6-47d1-9340-6ad62acd5037" target="_blank" class="btn-buy">Al →</a>
         </div>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- WHY -->
-<section class="why" id="about">
-  <div class="fade-in">
-    <div class="section-tag">Why PixelDrop Studio</div>
-    <h2 class="section-title">Everything a POD seller<br>actually needs.</h2>
-  </div>
-  <div class="features-grid">
-    <div class="feature-card fade-in">
-      <div class="feature-icon">⚡</div>
-      <div class="feature-title">Instant Download</div>
-      <div class="feature-text">All products are delivered immediately after purchase. No waiting, no shipping — download and start using right away.</div>
-    </div>
-    <div class="feature-card fade-in">
-      <div class="feature-icon">🎯</div>
-      <div class="feature-title">Platform-Ready Files</div>
-      <div class="feature-text">Files are formatted specifically for Printify, Printful, Redbubble, and Merch by Amazon. Just upload and go.</div>
-    </div>
-    <div class="feature-card fade-in">
-      <div class="feature-icon">🔄</div>
-      <div class="feature-title">Commercial License</div>
-      <div class="feature-text">All assets come with a full commercial license. Sell as many products as you want with no royalty fees.</div>
-    </div>
-    <div class="feature-card fade-in">
-      <div class="feature-icon">📐</div>
-      <div class="feature-title">High Resolution</div>
-      <div class="feature-text">All graphics are 300 DPI and print-quality. Your customers will receive crisp, professional prints every time.</div>
-    </div>
-    <div class="feature-card fade-in">
-      <div class="feature-icon">🛠️</div>
-      <div class="feature-title">Editable Formats</div>
-      <div class="feature-text">PSD, PNG, SVG and PDF files included wherever applicable. Customize easily in Photoshop, Canva, or Illustrator.</div>
-    </div>
-    <div class="feature-card fade-in">
-      <div class="feature-icon">💬</div>
-      <div class="feature-title">Responsive Support</div>
-      <div class="feature-text">Questions? We respond to all support emails within 24 hours. We're real people who want to see you succeed.</div>
-    </div>
-  </div>
-</section>
-
-<!-- POLICIES -->
-<section class="policies" id="policies">
-  <div class="policy-block fade-in">
-    <h3>🔒 Privacy Policy</h3>
-    <p>We collect only the information necessary to process your order — your email address and payment details (handled securely by our payment processor). We do not sell, share, or rent your personal information to third parties. Order information is retained for accounting and support purposes only. You may request deletion of your data at any time by contacting us.</p>
-  </div>
-  <div class="policy-block fade-in">
-    <h3>↩️ Refund Policy</h3>
-    <p>Due to the instant-access nature of digital downloads, all sales are final once the product has been delivered. If you experience a technical issue with your download or receive a corrupted file, please contact us within 7 days and we will resolve it promptly. We stand behind every product we sell.</p>
-  </div>
-</section>
-
-<!-- CONTACT CTA -->
-<div class="contact-bar" id="contact">
-  <div>
-    <h2>Ready to start your POD business?</h2>
-    <p>Browse our full catalog and download your first asset in minutes.</p>
-  </div>
-  <a href="#products" class="btn-white">Shop All Products</a>
-</div>
-
-<!-- FOOTER -->
-<footer>
-  <div class="footer-brand">
-    <span class="logo">OCeylan<span style="color:var(--accent)">Design</span></span>
-    <p>Digital assets for print-on-demand creators. Mockups, designs, guides, and more — all instantly downloadable.</p>
-  </div>
-  <div>
-    <h4>Products</h4>
-    <ul>
-      <li><a href="#products">T-Shirt Designs</a></li>
-      <li><a href="#products">Phone Mockups</a></li>
-      <li><a href="#products">Wall Art Prints</a></li>
-      <li><a href="#products">POD eBooks</a></li>
-      <li><a href="#products">Starter Bundles</a></li>
-    </ul>
-  </div>
-  <div>
-    <h4>Info</h4>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#policies">Privacy Policy</a></li>
-      <li><a href="#policies">Refund Policy</a></li>
-      <li><a href="/cdn-cgi/l/email-protection#23505653534c515763534a5b464f47514c53505756474a4c0d404c4e">Contact Us</a></li>
-    </ul>
-  </div>
-</footer>
-<div class="footer-bottom">
-      <p>© 2025 OCeylanDesign. All rights reserved. Digital products only — no physical goods are sold.</p>
-  <p>Payments processed securely via Lemon Squeezy & Stripe.</p>
-</div>
-
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  // Fade-in on scroll
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => entry.target.classList.add('visible'
